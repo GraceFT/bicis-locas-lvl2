@@ -31,7 +31,7 @@ opcionCont.parentNode.appendChild(opcionSpan);
 }
 
 
-//Nodos mencionaddos
+//Nodos mencionados
 var nameSpan = document.createElement("span");
 var apellSpan = document.createElement("span");
 var emailSpan = document.createElement("span");
@@ -41,7 +41,7 @@ var passSpan2 = document.createElement("span");
 
 //Validando Formulario
 function validateForm(){
-//Para llamara todas las funciones
+//Obtener los valores
     var nombre = document.getElementById("name").value;
     var apellido = document.getElementById("lastname").value;
     var correo = document.getElementById("input-email").value;
