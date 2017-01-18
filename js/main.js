@@ -1,7 +1,7 @@
 //Creando nodos
 function nameAvise(){
 var nameCont = document.getElementById("name");
-nameSpan.innerHTML ="DebeS ingresar tu Nombre";
+nameSpan.innerHTML ="Debes ingresar tu Nombre";
 nameCont.parentNode.appendChild(nameSpan);
 }
 function apellAvise(){
@@ -21,7 +21,7 @@ passCont.parentNode.appendChild(passSpan);
 }
 function passAvise2(){
 var passCont2 = document.getElementById("input-password");
-passSpan2.innerHTML="La contrasena no debe ser igual a 123456 o password";
+passSpan2.innerHTML="La contraseña no debe ser igual a 123456 o password";
 passCont2.parentNode.appendChild(passSpan2);
 }
 function opcionAvise(){
@@ -49,8 +49,9 @@ function validateForm(){
     var indice = document.getElementsByClassName("form-control")[4].value;
   
 //Nodos de aviso    
-    if (nombre ===""||apellido===""||correo===""||contra===""){
+    if (nombre ===""||apellido===""||correo===""||contra===""||indice==false){
         nameAvise();
+        apellAvise();
         emailAvise();
         passAvise();
         opcionAvise();
@@ -103,8 +104,10 @@ function validateForm(){
 //Validar Bicis        
     if( indice == null || indice == 0 ){
        opcionAvise();
+        return false;
     }else{
         opcionSpan.style.display="none";
+        return true;
     }    
 
 }
