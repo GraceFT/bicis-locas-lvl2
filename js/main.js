@@ -81,7 +81,7 @@ function validatePassword(){
 //validating options about bycicles
 function validateSelector(){
     var indice=document.getElementById("options");
-    if( indice.value == null || indice.value == 0 ){
+    if(indice.value == null || indice.value == 0 ){
        createSpan("options","Selecciona una bicicleta");
     }else{
         removeSpan("options");
